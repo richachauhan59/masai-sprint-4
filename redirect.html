@@ -13,29 +13,79 @@
 <body>
 
 
-    <div class="container">
+    <div class="container w-75">
         <form>
             <div class="form-group">
                 <label>Enter Your Location To See the Details</label>
-                <input type="name" class="form-control">
+                <input type="name" class="form-control" id="input">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" onclick="append_d()">Submit</button>
         </form>
     </div>
 
-    <div class="container">
+    <div class="container mt-5" id="main_div">
 
 
     </div>
 
     <script>
+        // Agra: (4)[…]
 
-        localStorage.getItem('details', JSON.parse(obj))
-        document.getElementsByClassName('container')
-        var div = createElement('div')
-        div.setAttribute('class', "card")
+        // 0: Object { Days: "4 days Trip, Two Nights and 2 days" }
+
+        // 1: Object { "Total Price": "10k per head" }
+
+        // 2: Object { Food: "Break-Fast, Lunch, Dinner (2k per Day)" }
+
+        // 3: Object { Hotel: "Available for three nights" }
+
+        // length: 4
+        // var data = JSON.parse(window.localStorage.getItem('details'));
+        // console.log(Object.keys(data))
+        // var key = Object.keys(data)
+
+        // console.log(data.Agra[0].Days, data.length)
+        // localStorage.getItem('details', JSON.parse(obj))
 
 
+        function append_d() {
+            event.preventDefault()
+            var input = document.getElementById('input').value
+            var data = JSON.parse(window.localStorage.getItem('details'));
+            console.log(data[0])
+            console.log(Object.keys(data))
+            var key = Object.keys(data)
+            for (var i = 0; i < 10; i++) {
+                if (input == key[i]) {
+                    var main_div = document.getElementById("main_div")
+                    var div = document.createElement('div')
+
+                    div.setAttribute('class', "card")
+                    var h1 = document.createElement('h1')
+                    h1.textContent = "Details of Trip for " + key[i]
+
+
+                    var h3 = document.createElement('h3')
+                    h3.textContent = data.Agra[0].Days
+
+
+                    var h3_2 = document.createElement('h3')
+                    h3_2.textContent = key[i][1]
+
+
+                    var h3_4 = document.createElement('h3')
+                    h3_4.textContent = key[i][2]
+
+
+                    var h3_5 = document.createElement('h3')
+                    h3_5.textContent = key[i][3]
+
+                    div.append(h1, h3, h3_2, h3_4, h3_5)
+
+                    main_div.appendChild(div)
+                }
+            }
+        }
     </script>
 
 

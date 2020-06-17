@@ -97,6 +97,14 @@ function EnterDetails() {
 
     }
 
-    localStorage.setItem('details', JSON.stringify(obj))
+    window.localStorage.setItem('details', JSON.stringify(obj))
+
+
+
+    // window.localStorage.setItem('user', JSON.stringify(person));
+
+
+
+    // JSON.parse(window.localStorage.getItem('user'));
 
 }
