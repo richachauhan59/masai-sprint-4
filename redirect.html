@@ -67,9 +67,8 @@
                     p4.textContent = "Hotel : " + data[key][0]["Hotel"]
 
                     var btn = document.createElement('a')
-                    btn.setAttribute('href', '#')
+                    btn.setAttribute('href', 'book.html')
                     btn.setAttribute('class', 'btn btn-primary')
-                    btn.setAttribute('onclick', bill())
                     btn.textContent = "Book"
 
                     b_div.append(p, p2, p3, p4, btn)
@@ -79,10 +78,6 @@
             }
         }
 
-        function bill() {
-            event.preventDefault()
-            window.location.href = "book.html"
-        }
     </script>
 
 
