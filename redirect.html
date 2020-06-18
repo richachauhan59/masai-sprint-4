@@ -5,86 +5,83 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <title>Search For Trip</title>
 </head>
 
 <body>
 
 
-    <div class="container w-75">
-        <form>
-            <div class="form-group">
-                <label>Enter Your Location To See the Details</label>
-                <input type="name" class="form-control" id="input">
-            </div>
-            <button type="submit" class="btn btn-primary" onclick="append_d()">Submit</button>
-        </form>
+    <div class="container w-75 mt-5">
+        <h1 class="display-4">Find your Trip Package</h1>
+        <div class="form-group">
+            <label>Enter Your Location To See the Details</label>
+            <input type="name" class="form-control" id="input">
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="append_d()">Submit</button>
     </div>
 
-    <div class="container mt-5" id="main_div">
+    <div class="container mt-5">
+        <div class="row" id="main_div">
+
+        </div>
 
 
     </div>
 
     <script>
-        // Agra: (4)[…]
-
-        // 0: Object { Days: "4 days Trip, Two Nights and 2 days" }
-
-        // 1: Object { "Total Price": "10k per head" }
-
-        // 2: Object { Food: "Break-Fast, Lunch, Dinner (2k per Day)" }
-
-        // 3: Object { Hotel: "Available for three nights" }
-
-        // length: 4
-        // var data = JSON.parse(window.localStorage.getItem('details'));
-        // console.log(Object.keys(data))
-        // var key = Object.keys(data)
-
-        // console.log(data.Agra[0].Days, data.length)
-        // localStorage.getItem('details', JSON.parse(obj))
-
-
         function append_d() {
             event.preventDefault()
             var input = document.getElementById('input').value
             var data = JSON.parse(window.localStorage.getItem('details'));
-            console.log(data[0])
-            console.log(Object.keys(data))
-            var key = Object.keys(data)
-            for (var i = 0; i < 10; i++) {
-                if (input == key[i]) {
+            // console.log(Object.keys(data))
+            for (var key in data) {
+                if (input === key) {
                     var main_div = document.getElementById("main_div")
                     var div = document.createElement('div')
+                    var h_div = document.createElement('div')
+                    var b_div = document.createElement('div')
 
-                    div.setAttribute('class', "card")
+                    div.setAttribute('class', "card col-5 mx-auto")
+                    div.style = "margin-top: 10px"
+                    h_div.setAttribute('class', "card-header")
+                    b_div.setAttribute('class', "card-body")
+
                     var h1 = document.createElement('h1')
-                    h1.textContent = "Details of Trip for " + key[i]
+                    h1.textContent = "Details of Trip for " + key
+                    h_div.appendChild(h1)
 
 
-                    var h3 = document.createElement('h3')
-                    h3.textContent = data.Agra[0].Days
+                    var p = document.createElement('p')
+                    // console.log(key, input, typeof input, typeof key)
+                    // console.log(data[key][0]["Days"])
+                    p.textContent = "Days : " + data[key][0]["Days"]
 
+                    var p2 = document.createElement('p')
+                    p2.textContent = "Total Price : " + data[key][0]["Total Price"]
 
-                    var h3_2 = document.createElement('h3')
-                    h3_2.textContent = key[i][1]
+                    var p3 = document.createElement('p')
+                    p3.textContent = "Food : " + data[key][0]["Food"]
 
+                    var p4 = document.createElement('p')
+                    p4.textContent = "Hotel : " + data[key][0]["Hotel"]
 
-                    var h3_4 = document.createElement('h3')
-                    h3_4.textContent = key[i][2]
+                    var btn = document.createElement('a')
+                    btn.setAttribute('href', '#')
+                    btn.setAttribute('class', 'btn btn-primary')
+                    btn.setAttribute('onclick', bill())
+                    btn.textContent = "Book"
 
-
-                    var h3_5 = document.createElement('h3')
-                    h3_5.textContent = key[i][3]
-
-                    div.append(h1, h3, h3_2, h3_4, h3_5)
-
+                    b_div.append(p, p2, p3, p4, btn)
+                    div.append(h_div, b_div)
                     main_div.appendChild(div)
                 }
             }
+        }
+
+        function bill() {
+            event.preventDefault()
+            window.location.href = "book.html"
         }
     </script>
 
@@ -95,9 +92,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+    <script src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

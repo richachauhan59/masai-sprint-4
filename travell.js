@@ -15,82 +15,58 @@ function EnterDetails() {
 
     var obj = {
         "Agra": [{
-            "Days": "4 days Trip, Two Nights and 2 days"
-        }, {
-            "Total Price": "10k per head"
-        }, {
-            "Food": "Break-Fast, Lunch, Dinner (2k per Day)"
-        }, {
+            "Days": "4 days Trip, Two Nights and 2 days",
+            "Total Price": "10k per head",
+            "Food": "Break-Fast, Lunch, Dinner (2k per Day)",
             "Hotel": "Available for three nights"
         }],
 
         "Ooty": [{
-            "Days": "4 days Trip, Two Nights and 2 days"
-        }, {
-            "Total Price": "10k per head"
-        }, {
-            "Food": "Break-Fast, Lunch, Dinner (2k per Day)"
-        }, {
+            "Days": "4 days Trip, Two Nights and 2 days",
+            "Total Price": "10k per head",
+            "Food": "Break-Fast, Lunch, Dinner (2k per Day)",
             "Hotel": "Available for three nights"
         }],
 
         "Rajasthan": [{
-            "Days": "4 days Trip, Two Nights and 2 days"
-        }, {
-            "Total Price": "10k per head"
-        }, {
-            "Food": "Break-Fast, Lunch, Dinner (2k per Day)"
-        }, {
+            "Days": "4 days Trip, Two Nights and 2 days",
+            "Total Price": "10k per head",
+            "Food": "Break-Fast, Lunch, Dinner (2k per Day)",
             "Hotel": "Available for three nights"
         }],
 
         "Kerla": [{
-            "Days": "4 days Trip, Two Nights and 2 days"
-        }, {
-            "Total Price": "10k per head"
-        }, {
-            "Food": "Break-Fast, Lunch, Dinner (2k per Day)"
-        }, {
+            "Days": "4 days Trip, Two Nights and 2 days",
+            "Total Price": "10k per head",
+            "Food": "Break-Fast, Lunch, Dinner (2k per Day)",
             "Hotel": "Available for three nights"
         }],
 
         "Goa": [{
-            "Days": "4 days Trip, Two Nights and 2 days"
-        }, {
-            "Total Price": "10k per head"
-        }, {
-            "Food": "Break-Fast, Lunch, Dinner (2k per Day)"
-        }, {
+            "Days": "4 days Trip, Two Nights and 2 days",
+            "Total Price": "10k per head",
+            "Food": "Break-Fast, Lunch, Dinner (2k per Day)",
             "Hotel": "Available for three nights"
         }],
 
         "Sikkim": [{
-            "Days": "4 days Trip, Two Nights and 2 days"
-        }, {
-            "Total Price": "10k per head"
-        }, {
-            "Food": "Break-Fast, Lunch, Dinner (2k per Day)"
-        }, {
+            "Days": "4 days Trip, Two Nights and 2 days",
+            "Total Price": "10k per head",
+            "Food": "Break-Fast, Lunch, Dinner (2k per Day)",
             "Hotel": "Available for three nights"
         }],
 
         "Mumbai": [{
-            "Days": "4 days Trip, Two Nights and 2 days"
-        }, {
-            "Total Price": "10k per head"
-        }, {
-            "Food": "Break-Fast, Lunch, Dinner (2k per Day)"
-        }, {
+            "Days": "4 days Trip, Two Nights and 2 days",
+            "Total Price": "10k per head",
+            "Food": "Break-Fast, Lunch, Dinner (2k per Day)",
             "Hotel": "Available for three nights"
         }],
 
         "Haridwar": [{
-            "Days": "4 days Trip, Two Nights and 2 days"
-        }, {
-            "Total Price": "10k per head"
-        }, {
-            "Food": "Break-Fast, Lunch, Dinner (2k per Day)"
-        }, {
+            "Days": "4 days Trip, Two Nights and 2 days",
+            "Total Price": "10k per head",
+            "Food": "Break-Fast, Lunch, Dinner (2k per Day)",
             "Hotel": "Available for three nights"
         }],
 
